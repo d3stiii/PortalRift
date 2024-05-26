@@ -27,24 +27,24 @@ MonoBehaviour:
       Damage: 15
       Radius: 1.6
       Cooldown: 1.9
-    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Sprite: {fileID: -129621486, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
     Cost: 35
   - Stats:
       Damage: 20
       Radius: 1.7
       Cooldown: 1.8
-    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Sprite: {fileID: -129621486, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
     Cost: 45
   - Stats:
       Damage: 25
       Radius: 1.9
       Cooldown: 1.7
-    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Sprite: {fileID: -129621486, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
     Cost: 50
   - Stats:
       Damage: 30
       Radius: 2
       Cooldown: 1.5
-    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Sprite: {fileID: -890230492, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
     Cost: 60
   _shotSound: {fileID: 8300000, guid: a931da70ee74947d5a047de583170ade, type: 3}
