@@ -36,7 +36,7 @@ namespace PortalRift.Runtime.Services.SaveLoad
     {
       return new PersistentData
       {
-        CompletedLevelData = new CompletedLevelData
+        PlayerProgress = new PlayerProgress
         {
           LastCompletedLevel = -1
         },

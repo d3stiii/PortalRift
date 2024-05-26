@@ -41,7 +41,7 @@ namespace PortalRift.Runtime.Meta.UI
 
     private void GenerateLevelButtons()
     {
-      var maxAvailableLevelIndex = _persistentDataProvider.PersistentData.CompletedLevelData.LastCompletedLevel + 1;
+      var maxAvailableLevelIndex = _persistentDataProvider.PersistentData.PlayerProgress.LastCompletedLevel + 1;
 
       for (var i = 0; i < _configProvider.Levels.Length; i++)
       {

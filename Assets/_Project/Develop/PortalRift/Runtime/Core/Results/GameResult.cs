@@ -35,7 +35,7 @@ namespace PortalRift.Runtime.Core.Results
       _uiService.CloseAll();
       _uiService.Open<WinWindow>();
 
-      _persistentDataProvider.PersistentData.CompletedLevelData.CompleteLevel(_levelSelector.CurrentLevelId);
+      _persistentDataProvider.PersistentData.PlayerProgress.CompleteLevel(_levelSelector.CurrentLevelId);
       _saveLoadService.Save();
     }
 

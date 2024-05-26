@@ -5,7 +5,7 @@ namespace PortalRift.Runtime.Data.Persistent
   [Serializable]
   public class PersistentData
   {
-    public CompletedLevelData CompletedLevelData;
+    public PlayerProgress PlayerProgress;
     public SoundSettingsData SoundSettingsData;
   }
 }
