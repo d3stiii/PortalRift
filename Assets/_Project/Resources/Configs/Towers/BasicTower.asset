@@ -18,62 +18,62 @@ MonoBehaviour:
   _cost: 30
   _upgradeLevels:
   - Stats:
-      Damage: 13
-      Radius: 2
+      Damage: 8
+      Radius: 1.9
       Cooldown: 0.85
     Sprite: {fileID: -1625042237, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 30
   - Stats:
-      Damage: 16
-      Radius: 2.05
+      Damage: 11
+      Radius: 1.95
       Cooldown: 0.8
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 35
   - Stats:
-      Damage: 19
-      Radius: 2.1
+      Damage: 14
+      Radius: 2
       Cooldown: 0.75
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 40
   - Stats:
-      Damage: 22
-      Radius: 2.15
+      Damage: 17
+      Radius: 2.05
       Cooldown: 0.7
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 45
   - Stats:
-      Damage: 25
-      Radius: 2.2
+      Damage: 20
+      Radius: 2.1
       Cooldown: 0.65
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 50
   - Stats:
-      Damage: 28
-      Radius: 2.25
+      Damage: 23
+      Radius: 2.13
       Cooldown: 0.62
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 55
   - Stats:
-      Damage: 31
-      Radius: 2.35
+      Damage: 26
+      Radius: 2.23
       Cooldown: 0.62
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 60
   - Stats:
-      Damage: 34
-      Radius: 2.5
+      Damage: 29
+      Radius: 2.38
       Cooldown: 0.6
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 65
   - Stats:
-      Damage: 37
-      Radius: 2.75
+      Damage: 32
+      Radius: 2.6
       Cooldown: 0.57
     Sprite: {fileID: -543828861, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 70
   - Stats:
-      Damage: 40
-      Radius: 3
+      Damage: 35
+      Radius: 2.85
       Cooldown: 0.5
     Sprite: {fileID: -976741218, guid: c3e1e21f25b4bd94fa8347127eb629eb, type: 3}
     Cost: 80

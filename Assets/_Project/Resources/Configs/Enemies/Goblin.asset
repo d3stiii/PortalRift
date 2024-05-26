@@ -16,8 +16,8 @@ MonoBehaviour:
   _prefab: {fileID: 7810483674490854984, guid: dcba44f1b41cdb94ba9be99171a953c5, type: 3}
   _moneyForKill: 7
   _damage: 5
-  _speed: 0.55
-  _health: 15
-  _maxUpgradableHealth: 150
+  _speed: 0.6
+  _health: 20
+  _maxUpgradableHealth: 160
   _deathSound: {fileID: 8300000, guid: d8d04c6f80a1140db85ede568dab1f51, type: 3}
   _hitSound: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}

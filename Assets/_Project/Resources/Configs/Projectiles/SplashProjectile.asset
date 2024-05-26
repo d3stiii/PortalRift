@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _speed: 5
-  _damageRadius: 1.5
+  _damageRadius: 2
   _prefab: {fileID: 540865073249651196, guid: 78be2633eff41dc438dd517f4f50503d, type: 3}

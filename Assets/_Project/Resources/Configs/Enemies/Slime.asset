@@ -18,6 +18,6 @@ MonoBehaviour:
   _damage: 2
   _speed: 1
   _health: 10
-  _maxUpgradableHealth: 100
+  _maxUpgradableHealth: 115
   _deathSound: {fileID: 8300000, guid: d8d04c6f80a1140db85ede568dab1f51, type: 3}
   _hitSound: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
