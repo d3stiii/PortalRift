@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using PortalRift.Configs;
+using PortalRift.Runtime.Core.Enemies.UI;
 using PortalRift.Runtime.Services.Audio;
 using UnityEngine;
 using VContainer;
@@ -14,7 +15,8 @@ namespace PortalRift.Runtime.Core.Enemies
   public class EnemyDeath : MonoBehaviour
   {
     public event Action Died;
-    
+
+    [SerializeField] private HealthBar _healthBar;
     private EnemyAnimator _animator;
     private AudioService _audioService;
     private AudioClip _deathSound;
@@ -38,6 +40,12 @@ namespace PortalRift.Runtime.Core.Enemies
       _enemyHealth.HealthChanged += OnHealthChanged;
     }
 
+    private void OnEnable()
+    {
+      _movement.enabled = true;
+      _healthBar.gameObject.SetActive(true);
+    }
+
     private void OnHealthChanged()
     {
       if (_enemyHealth.CurrentHp <= 0)
@@ -48,6 +56,7 @@ namespace PortalRift.Runtime.Core.Enemies
     {
       _audioService.PlaySfx(_deathSound);
       _movement.enabled = false;
+      _healthBar.gameObject.SetActive(false);
       _animator.StopMoving();
       _animator.PlayDeath();
       StartCoroutine(ReturnToPool());

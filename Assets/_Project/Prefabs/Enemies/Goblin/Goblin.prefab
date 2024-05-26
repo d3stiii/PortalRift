@@ -435,6 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 1
+  _healthBar: {fileID: 5096300258279135116}
 --- !u!114 &1261368563098888366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9ef592f11f4fb5a68bc5285c07289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 5096300258279135116}
 --- !u!114 &393923437281225102
 MonoBehaviour:
   m_ObjectHideFlags: 0
