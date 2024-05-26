@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b57d13502047de84e8dd564ac74271, type: 3}
+  m_Name: SplashTower
+  m_EditorClassIdentifier: 
+  _type: 2
+  _projectileType: 1
+  _prefab: {fileID: 4604811642421560744, guid: 1c97eea5a201a434184698eee6c692c5, type: 3}
+  _cost: 45
+  _upgradeLevels:
+  - Stats:
+      Damage: 10
+      Radius: 1.5
+      Cooldown: 2
+    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Cost: 30
+  - Stats:
+      Damage: 15
+      Radius: 1.6
+      Cooldown: 1.9
+    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Cost: 35
+  - Stats:
+      Damage: 20
+      Radius: 1.7
+      Cooldown: 1.8
+    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Cost: 45
+  - Stats:
+      Damage: 25
+      Radius: 1.9
+      Cooldown: 1.7
+    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Cost: 50
+  - Stats:
+      Damage: 30
+      Radius: 2
+      Cooldown: 1.5
+    Sprite: {fileID: -1968300532, guid: 5c55b4c52ddd3ea41933436991837a39, type: 3}
+    Cost: 60
+  _shotSound: {fileID: 8300000, guid: a931da70ee74947d5a047de583170ade, type: 3}

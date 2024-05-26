@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae685f877624d7a92db281769ab7c5e, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 4609197679841355068, guid: 819a3d11fa0edef4397ef67cb77a926b, type: 3}
+  _enemyWaypoints:
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: 2.5, z: 0}
+  - {x: 2.5, y: 2.5, z: 0}
+  - {x: 2.5, y: -3.5, z: 0}
+  - {x: 0.5, y: -3.5, z: 0}
+  - {x: 0.5, y: -1.5, z: 0}
+  - {x: -1.5, y: -1.5, z: 0}
+  - {x: -1.5, y: 2.5, z: 0}
+  _waves:
+  - Enemies: 0000000001000000
+    EnemiesCount: 15
+    EnemySpawnRate: 35
+  - Enemies: 0000000001000000
+    EnemiesCount: 20
+    EnemySpawnRate: 30
+  - Enemies: 0000000001000000
+    EnemiesCount: 20
+    EnemySpawnRate: 50
+  - Enemies: 00000000
+    EnemiesCount: 25
+    EnemySpawnRate: 50
+  - Enemies: 00000000
+    EnemiesCount: 25
+    EnemySpawnRate: 50
+  - Enemies: 00000000
+    EnemiesCount: 30
+    EnemySpawnRate: 35
+  - Enemies: 0000000001000000
+    EnemiesCount: 35
+    EnemySpawnRate: 30
+  _startMoney: 70
+  _timeBetweenWaves: 5
+  _music: {fileID: 8300000, guid: b1947c67bb4a2d144b09c7ef3806ad3d, type: 3}

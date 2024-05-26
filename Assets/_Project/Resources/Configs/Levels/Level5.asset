@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae685f877624d7a92db281769ab7c5e, type: 3}
+  m_Name: Level5
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 3599050750499867624, guid: 2b425a9134d4ac34e856ef5334af6ff6, type: 3}
+  _enemyWaypoints:
+  - {x: -8.5, y: -2.5, z: 0}
+  - {x: -1.5, y: -2.5, z: 0}
+  - {x: -1.5, y: 0.5, z: 0}
+  - {x: -3.5, y: 0.5, z: 0}
+  - {x: -3.5, y: 2.5, z: 0}
+  - {x: 0.5, y: 2.5, z: 0}
+  - {x: 0.5, y: -2.5, z: 0}
+  - {x: 5.5, y: -2.5, z: 0}
+  - {x: 5.5, y: 0.5, z: 0}
+  - {x: 8.5, y: 0.5, z: 0}
+  _waves:
+  - Enemies: 00000000
+    EnemiesCount: 10
+    EnemySpawnRate: 50
+  - Enemies: 0100000000000000
+    EnemiesCount: 15
+    EnemySpawnRate: 35
+  - Enemies: 0100000000000000
+    EnemiesCount: 15
+    EnemySpawnRate: 35
+  - Enemies: 0100000000000000
+    EnemiesCount: 20
+    EnemySpawnRate: 35
+  - Enemies: 0100000000000000
+    EnemiesCount: 25
+    EnemySpawnRate: 35
+  - Enemies: 0100000000000000
+    EnemiesCount: 25
+    EnemySpawnRate: 35
+  - Enemies: 01000000
+    EnemiesCount: 30
+    EnemySpawnRate: 35
+  - Enemies: 01000000
+    EnemiesCount: 25
+    EnemySpawnRate: 40
+  - Enemies: 01000000
+    EnemiesCount: 35
+    EnemySpawnRate: 35
+  - Enemies: 00000000
+    EnemiesCount: 35
+    EnemySpawnRate: 35
+  - Enemies: 00000000
+    EnemiesCount: 25
+    EnemySpawnRate: 35
+  - Enemies: 00000000
+    EnemiesCount: 25
+    EnemySpawnRate: 50
+  - Enemies: 0000000001000000
+    EnemiesCount: 35
+    EnemySpawnRate: 30
+  - Enemies: 0000000001000000
+    EnemiesCount: 30
+    EnemySpawnRate: 45
+  - Enemies: 0000000001000000
+    EnemiesCount: 45
+    EnemySpawnRate: 45
+  _startMoney: 80
+  _timeBetweenWaves: 5
+  _music: {fileID: 8300000, guid: b1947c67bb4a2d144b09c7ef3806ad3d, type: 3}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b57d13502047de84e8dd564ac74271, type: 3}
+  m_Name: SniperTower
+  m_EditorClassIdentifier: 
+  _type: 1
+  _projectileType: 0
+  _prefab: {fileID: 4604811642421560744, guid: 41eb05f34596fd74fae17423cfb1666b, type: 3}
+  _cost: 50
+  _upgradeLevels:
+  - Stats:
+      Damage: 35
+      Radius: 5
+      Cooldown: 3.5
+    Sprite: {fileID: -108754448, guid: ff1a1010d5dc20842981d12a746fbbce, type: 3}
+    Cost: 50
+  - Stats:
+      Damage: 50
+      Radius: 5.5
+      Cooldown: 3
+    Sprite: {fileID: -2048242370, guid: ff1a1010d5dc20842981d12a746fbbce, type: 3}
+    Cost: 70
+  - Stats:
+      Damage: 65
+      Radius: 6
+      Cooldown: 2.25
+    Sprite: {fileID: 1619604262, guid: ff1a1010d5dc20842981d12a746fbbce, type: 3}
+    Cost: 80
+  _shotSound: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
