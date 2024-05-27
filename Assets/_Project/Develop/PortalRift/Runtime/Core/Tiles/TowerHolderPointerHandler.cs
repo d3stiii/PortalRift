@@ -32,8 +32,6 @@ namespace PortalRift.Runtime.Core.Tiles
       if (_pauseService.IsPaused)
         return;
 
-      CloseAllTowerWindows();
-
       if (_tileSelection.TowerHolder == _towerHolder)
       {
         _tileSelection.Unselect();
@@ -46,12 +44,6 @@ namespace PortalRift.Runtime.Core.Tiles
         _uiService.Open<BuildingWindow>();
       else
         _uiService.Open<UpgradingWindow>();
-    }
-
-    private void CloseAllTowerWindows()
-    {
-      _uiService.Close<BuildingWindow>();
-      _uiService.Close<UpgradingWindow>();
     }
   }
 }

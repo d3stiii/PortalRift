@@ -853,7 +853,6 @@ GameObject:
   - component: {fileID: 6088465739011870953}
   - component: {fileID: 3030568732495133928}
   - component: {fileID: 4540746043013628006}
-  - component: {fileID: 1728027304440652347}
   m_Layer: 0
   m_Name: SellButton
   m_TagString: Untagged
@@ -963,19 +962,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1728027304440652347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3116076534501272401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a63570b53684e7ab25712f0b89c6275, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sellButton: {fileID: 4540746043013628006}
 --- !u!1 &3347406915488887048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 1255511026506290289}
   _upgradeButton: {fileID: 7546462395978074795}
+  _sellButton: {fileID: 4540746043013628006}
   _cost: {fileID: 257189067998523894}
   _currentDamage: {fileID: 7459576162991512082}
   _damageIncrement: {fileID: 2054840588708103261}

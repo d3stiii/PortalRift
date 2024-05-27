@@ -37,7 +37,7 @@ namespace PortalRift.Runtime.Core.Building.UI
     protected override void Initialize()
     {
       _buildingService.OnPlacedTower += ShowUpgradingWindow;
-      _closeButton.onClick.AddListener(Close);
+      _tileSelection.OnTileUnselected += Close;
       _closeButton.onClick.AddListener(_tileSelection.Unselect);
 
       GenerateTowerButtons();
@@ -56,7 +56,7 @@ namespace PortalRift.Runtime.Core.Building.UI
     protected override void Cleanup()
     {
       _buildingService.OnPlacedTower -= ShowUpgradingWindow;
-      _closeButton.onClick.RemoveListener(Close);
+      _tileSelection.OnTileUnselected -= Close;
       _closeButton.onClick.RemoveListener(_tileSelection.Unselect);
     }
 

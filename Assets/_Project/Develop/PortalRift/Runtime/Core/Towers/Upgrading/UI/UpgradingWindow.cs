@@ -1,6 +1,8 @@
 using PortalRift.Configs;
 using PortalRift.Runtime.Common.UI;
 using PortalRift.Runtime.Core.Tiles;
+using PortalRift.Runtime.Data.Session;
+using PortalRift.Runtime.Services.Data;
 using PortalRift.Runtime.Services.UI;
 using TMPro;
 using UnityEngine;
@@ -13,8 +15,9 @@ namespace PortalRift.Runtime.Core.Towers.Upgrading.UI
   {
     [SerializeField] private Button _closeButton;
     [SerializeField] private Button _upgradeButton;
+    [SerializeField] private Button _sellButton;
 
-    [Space] 
+    [Space]
     [Header("Parameters")]
     [SerializeField] private TextMeshProUGUI _cost;
     [SerializeField] private TextMeshProUGUI _currentDamage;
@@ -27,38 +30,38 @@ namespace PortalRift.Runtime.Core.Towers.Upgrading.UI
     private TileSelection _tileSelection;
     private UpgradingService _upgradingService;
     private UIService _windowService;
+    private MoneyData _moneyData;
 
     [Inject]
-    public void Construct(UIService uiService, UpgradingService upgradingService, TileSelection tileSelection)
+    public void Construct(UIService uiService,
+      UpgradingService upgradingService,
+      TileSelection tileSelection,
+      SessionDataProvider sessionDataProvider)
     {
       _tileSelection = tileSelection;
       _windowService = uiService;
       _upgradingService = upgradingService;
+      _moneyData = sessionDataProvider.SessionData.MoneyData;
     }
 
     protected override void Initialize()
     {
-      _closeButton.onClick.AddListener(Close);
+      _closeButton.onClick.AddListener(_tileSelection.Unselect);
       _upgradeButton.onClick.AddListener(UpgradeTower);
+      _sellButton.onClick.AddListener(SellTower);
       _upgradingService.OnUpgradedTower += UpdateStatsView;
+      _tileSelection.OnTileUnselected += Close;
     }
 
-    protected override void OnOpening() => 
+    protected override void OnOpening() =>
       UpdateStatsView();
 
-    protected override void Cleanup()
-    {
-      _closeButton.onClick.RemoveListener(Close);
-      _upgradeButton.onClick.RemoveListener(UpgradeTower);
-      _upgradingService.OnUpgradedTower -= UpdateStatsView;
-    }
+    private void UpgradeTower() =>
+      _upgradingService.UpgradeTower();
 
     private void UpdateStatsView()
     {
       var tower = _tileSelection.TowerHolder.Tower;
-      if (tower == null)
-        return;
-      
       var towerUpgrading = tower.GetComponent<TowerUpgrading>();
       DisplayCurrentStats(towerUpgrading.CurrentUpgradeData);
       DisplayUpgradeAvailability();
@@ -66,10 +69,15 @@ namespace PortalRift.Runtime.Core.Towers.Upgrading.UI
       DisplaySellInfo(towerUpgrading);
     }
 
-    private void UpgradeTower() => 
-      _upgradingService.UpgradeTower();
+    private void SellTower()
+    {
+      var tower = _tileSelection.TowerHolder.Tower;
+      _moneyData.AddMoney((int)(tower.GetComponent<TowerUpgrading>().MoneySpent * 0.8f));
+      _tileSelection.TowerHolder.RemoveTower();
+      _tileSelection.Unselect();
+    }
 
-    private void DisplaySellInfo(TowerUpgrading towerUpgrading) => 
+    private void DisplaySellInfo(TowerUpgrading towerUpgrading) =>
       _sellCost.text = $"Sell for {towerUpgrading.MoneySpent * 0.8}";
 
     private void DisplayCurrentStats(UpgradeLevel upgradeData)
@@ -105,10 +113,16 @@ namespace PortalRift.Runtime.Core.Towers.Upgrading.UI
       _cooldownDecrement.text = $"-{currentStats.Cooldown - nextLevel.Stats.Cooldown:0.00}";
     }
 
-    private void Close()
+    protected override void Cleanup()
     {
-      _tileSelection.Unselect();
-      _windowService.Close<UpgradingWindow>();
+      _closeButton.onClick.RemoveListener(_tileSelection.Unselect);
+      _upgradeButton.onClick.RemoveListener(UpgradeTower);
+      _sellButton.onClick.RemoveListener(SellTower);
+      _upgradingService.OnUpgradedTower -= UpdateStatsView;
+      _tileSelection.OnTileUnselected -= Close;
     }
+
+    private void Close() =>
+      _windowService.Close<UpgradingWindow>();
   }
 }
